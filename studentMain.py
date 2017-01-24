@@ -7,13 +7,15 @@
     boundary found in the lesson video, and make a plot that
     visually shows the decision boundary """
 
-
-from prep_terrain_data import makeTerrainData
+import sys
 from class_vis import prettyPicture, output_image
-from ClassifyNB import classify
+from prep_terrain_data import makeTerrainData
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pylab as pl
+from classifyDT import classify  			# using Decision Trees (from sklearn import tree)
+# from ClassifyNB import classify 			# using Naive-Bayes (from sklearn.naive_bayes import GaussianNB)
 
 
 features_train, labels_train, features_test, labels_test = makeTerrainData()
